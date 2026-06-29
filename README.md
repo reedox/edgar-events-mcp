@@ -35,25 +35,23 @@ resolved rows, not pointers.
 
 ## Install
 
-The server runs over stdio and installs from PyPI. With
-[uv](https://docs.astral.sh/uv/) you do not install anything ahead of time:
+The server runs over stdio. Until the PyPI release lands, install it from the
+source repo. With [uv](https://docs.astral.sh/uv/) there is nothing to install
+ahead of time:
 
 ```bash
-uvx edgar-events-mcp
+uvx --from git+https://github.com/reedox/edgar-events-mcp edgar-events-mcp
 ```
 
 Or with pip:
 
 ```bash
-pip install edgar-events-mcp
+pip install git+https://github.com/reedox/edgar-events-mcp
 edgar-events-mcp
 ```
 
-To run the latest from source before the next release:
-
-```bash
-pip install git+https://github.com/reedox/edgar-events-mcp
-```
+Once it is on PyPI this shortens to `uvx edgar-events-mcp` (or
+`pip install edgar-events-mcp`).
 
 ## Claude Desktop
 
@@ -64,7 +62,7 @@ Add this to `claude_desktop_config.json` (Settings → Developer → Edit Config
   "mcpServers": {
     "edgar-events": {
       "command": "uvx",
-      "args": ["edgar-events-mcp"],
+      "args": ["--from", "git+https://github.com/reedox/edgar-events-mcp", "edgar-events-mcp"],
       "env": {
         "EDGAR_EVENTS_API_KEY": "your-key-or-omit-for-the-free-tool"
       }
