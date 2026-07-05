@@ -1,4 +1,4 @@
-<!-- mcp-name: io.github.reedox/edgar-events-mcp -->
+<!-- mcp-name: io.github.fortifiedai/edgar-events-mcp -->
 
 # EDGAR Events MCP server
 
@@ -40,13 +40,13 @@ source repo. With [uv](https://docs.astral.sh/uv/) there is nothing to install
 ahead of time:
 
 ```bash
-uvx --from git+https://github.com/reedox/edgar-events-mcp edgar-events-mcp
+uvx --from git+https://github.com/fortifiedai/edgar-events-mcp edgar-events-mcp
 ```
 
 Or with pip:
 
 ```bash
-pip install git+https://github.com/reedox/edgar-events-mcp
+pip install git+https://github.com/fortifiedai/edgar-events-mcp
 edgar-events-mcp
 ```
 
@@ -62,7 +62,7 @@ Add this to `claude_desktop_config.json` (Settings → Developer → Edit Config
   "mcpServers": {
     "edgar-events": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/reedox/edgar-events-mcp", "edgar-events-mcp"],
+      "args": ["--from", "git+https://github.com/fortifiedai/edgar-events-mcp", "edgar-events-mcp"],
       "env": {
         "EDGAR_EVENTS_API_KEY": "your-key-or-omit-for-the-free-tool"
       }
